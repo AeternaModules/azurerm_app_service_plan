@@ -26,7 +26,7 @@ EOT
     resource_group_name          = string
     app_service_environment_id   = optional(string)
     is_xenon                     = optional(bool)
-    kind                         = optional(string) # Default: "Windows"
+    kind                         = optional(string)
     maximum_elastic_worker_count = optional(number)
     per_site_scaling             = optional(bool)
     reserved                     = optional(bool)
