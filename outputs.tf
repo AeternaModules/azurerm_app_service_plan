@@ -1,57 +1,57 @@
 output "app_service_plans_id" {
   description = "Map of id values across all app_service_plans, keyed the same as var.app_service_plans"
-  value       = { for k, v in azurerm_app_service_plan.app_service_plans : k => v.id }
+  value       = { for k, v in azurerm_app_service_plan.app_service_plans : k => v.id if v.id != null && length(v.id) > 0 }
 }
 output "app_service_plans_app_service_environment_id" {
   description = "Map of app_service_environment_id values across all app_service_plans, keyed the same as var.app_service_plans"
-  value       = { for k, v in azurerm_app_service_plan.app_service_plans : k => v.app_service_environment_id }
+  value       = { for k, v in azurerm_app_service_plan.app_service_plans : k => v.app_service_environment_id if v.app_service_environment_id != null && length(v.app_service_environment_id) > 0 }
 }
 output "app_service_plans_is_xenon" {
   description = "Map of is_xenon values across all app_service_plans, keyed the same as var.app_service_plans"
-  value       = { for k, v in azurerm_app_service_plan.app_service_plans : k => v.is_xenon }
+  value       = { for k, v in azurerm_app_service_plan.app_service_plans : k => v.is_xenon if v.is_xenon != null }
 }
 output "app_service_plans_kind" {
   description = "Map of kind values across all app_service_plans, keyed the same as var.app_service_plans"
-  value       = { for k, v in azurerm_app_service_plan.app_service_plans : k => v.kind }
+  value       = { for k, v in azurerm_app_service_plan.app_service_plans : k => v.kind if v.kind != null && length(v.kind) > 0 }
 }
 output "app_service_plans_location" {
   description = "Map of location values across all app_service_plans, keyed the same as var.app_service_plans"
-  value       = { for k, v in azurerm_app_service_plan.app_service_plans : k => v.location }
+  value       = { for k, v in azurerm_app_service_plan.app_service_plans : k => v.location if v.location != null && length(v.location) > 0 }
 }
 output "app_service_plans_maximum_elastic_worker_count" {
   description = "Map of maximum_elastic_worker_count values across all app_service_plans, keyed the same as var.app_service_plans"
-  value       = { for k, v in azurerm_app_service_plan.app_service_plans : k => v.maximum_elastic_worker_count }
+  value       = { for k, v in azurerm_app_service_plan.app_service_plans : k => v.maximum_elastic_worker_count if v.maximum_elastic_worker_count != null }
 }
 output "app_service_plans_maximum_number_of_workers" {
   description = "Map of maximum_number_of_workers values across all app_service_plans, keyed the same as var.app_service_plans"
-  value       = { for k, v in azurerm_app_service_plan.app_service_plans : k => v.maximum_number_of_workers }
+  value       = { for k, v in azurerm_app_service_plan.app_service_plans : k => v.maximum_number_of_workers if v.maximum_number_of_workers != null }
 }
 output "app_service_plans_name" {
   description = "Map of name values across all app_service_plans, keyed the same as var.app_service_plans"
-  value       = { for k, v in azurerm_app_service_plan.app_service_plans : k => v.name }
+  value       = { for k, v in azurerm_app_service_plan.app_service_plans : k => v.name if v.name != null && length(v.name) > 0 }
 }
 output "app_service_plans_per_site_scaling" {
   description = "Map of per_site_scaling values across all app_service_plans, keyed the same as var.app_service_plans"
-  value       = { for k, v in azurerm_app_service_plan.app_service_plans : k => v.per_site_scaling }
+  value       = { for k, v in azurerm_app_service_plan.app_service_plans : k => v.per_site_scaling if v.per_site_scaling != null }
 }
 output "app_service_plans_reserved" {
   description = "Map of reserved values across all app_service_plans, keyed the same as var.app_service_plans"
-  value       = { for k, v in azurerm_app_service_plan.app_service_plans : k => v.reserved }
+  value       = { for k, v in azurerm_app_service_plan.app_service_plans : k => v.reserved if v.reserved != null }
 }
 output "app_service_plans_resource_group_name" {
   description = "Map of resource_group_name values across all app_service_plans, keyed the same as var.app_service_plans"
-  value       = { for k, v in azurerm_app_service_plan.app_service_plans : k => v.resource_group_name }
+  value       = { for k, v in azurerm_app_service_plan.app_service_plans : k => v.resource_group_name if v.resource_group_name != null && length(v.resource_group_name) > 0 }
 }
 output "app_service_plans_sku" {
   description = "Map of sku values across all app_service_plans, keyed the same as var.app_service_plans"
-  value       = { for k, v in azurerm_app_service_plan.app_service_plans : k => v.sku }
+  value       = { for k, v in azurerm_app_service_plan.app_service_plans : k => v.sku if v.sku != null && length(v.sku) > 0 }
 }
 output "app_service_plans_tags" {
   description = "Map of tags values across all app_service_plans, keyed the same as var.app_service_plans"
-  value       = { for k, v in azurerm_app_service_plan.app_service_plans : k => v.tags }
+  value       = { for k, v in azurerm_app_service_plan.app_service_plans : k => v.tags if v.tags != null && length(v.tags) > 0 }
 }
 output "app_service_plans_zone_redundant" {
   description = "Map of zone_redundant values across all app_service_plans, keyed the same as var.app_service_plans"
-  value       = { for k, v in azurerm_app_service_plan.app_service_plans : k => v.zone_redundant }
+  value       = { for k, v in azurerm_app_service_plan.app_service_plans : k => v.zone_redundant if v.zone_redundant != null }
 }
 
