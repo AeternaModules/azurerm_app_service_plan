@@ -44,7 +44,7 @@ output "app_service_plans_resource_group_name" {
 }
 output "app_service_plans_sku" {
   description = "Map of sku values across all app_service_plans, keyed the same as var.app_service_plans"
-  value       = { for k, v in azurerm_app_service_plan.app_service_plans : k => v.sku if v.sku != null && length(v.sku) > 0 }
+  value       = { for k, v in azurerm_app_service_plan.app_service_plans : k => one(v.sku) if v.sku != null && length(v.sku) > 0 }
 }
 output "app_service_plans_tags" {
   description = "Map of tags values across all app_service_plans, keyed the same as var.app_service_plans"
